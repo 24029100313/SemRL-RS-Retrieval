@@ -1,0 +1,155 @@
+{
+  "vocabulary_metadata": {
+    "version": "1.3 (final)",
+    "creation_date": "2025-10-18",
+    "author": "Sean R. Liang",
+    "description": "Three-granularity vocabulary for Remote Sensing image-text retrieval",
+    "optimization_target": "Soft rewriting with RL-based semantic control (no LVLM)",
+    "total_words": 421,
+    "granularities": {
+      "object": {
+        "count": 190,
+        "description": "Specific objects and landforms",
+        "examples": [
+          "aeroplanes",
+          "aircraft",
+          "airplane",
+          "airplanes",
+          "airport",
+          "apartments",
+          "apron",
+          "area",
+          "areas",
+          "automobiles"
+        ]
+      },
+      "scene": {
+        "count": 177,
+        "description": "Scene categories and attributes",
+        "examples": [
+          "adjacent",
+          "agricultural",
+          "aligned",
+          "arid",
+          "arranged",
+          "artificial",
+          "bald",
+          "bare",
+          "barren",
+          "beautiful"
+        ]
+      },
+      "layout": {
+        "count": 54,
+        "description": "Spatial relations",
+        "examples": [
+          "across",
+          "along",
+          "alongside",
+          "around",
+          "aside",
+          "at",
+          "away",
+          "behind",
+          "beside",
+          "between"
+        ]
+      }
+    }
+  },
+  "coverage_statistics": {
+    "content_word_coverage": 75.45260781290807,
+    "all_token_coverage": 49.206592700938245,
+    "total_captions_analyzed": 56485,
+    "datasets": [
+      "RSICD",
+      "RSITMD"
+    ],
+    "evaluation_date": "2025-10-18",
+    "quality_rating": "Excellent (≥70%)"
+  },
+  "version_history": {
+    "v1.0": {
+      "date": "2025-10-18",
+      "changes": "Initial construction from RSICD+RSITMD corpus",
+      "word_count": {
+        "object": 187,
+        "scene": 172,
+        "layout": 50,
+        "total": 409
+      }
+    },
+    "v1.1": {
+      "date": "2025-10-18",
+      "changes": "Manual review and corrections (removed abstract words, added spatial terms)",
+      "word_count": {
+        "object": 166,
+        "scene": 172,
+        "layout": 53,
+        "total": 391
+      }
+    },
+    "v1.2": {
+      "date": "2025-10-18",
+      "changes": "High-frequency noun supplementation (singular forms + compound facilities)",
+      "word_count": {
+        "object": 182,
+        "scene": 172,
+        "layout": 53,
+        "total": 407
+      },
+      "coverage": {
+        "content_word": 72.73
+      }
+    },
+    "v1.3": {
+      "date": "2025-10-18",
+      "changes": "Optimization for soft rewriting + RL (added area/farm/corner/block/district/wharf/lawn/vegetation in Object; circle/oval/triangular/khaki/empty in Scene; row in Layout)",
+      "word_count": {
+        "object": 190,
+        "scene": 177,
+        "layout": 54,
+        "total": 421
+      },
+      "coverage": {
+        "content_word": 75.45
+      },
+      "status": "FINAL"
+    }
+  },
+  "usage_instructions": {
+    "loading": "import json; vocab = json.load(open('data/vocabulary/rs_vocabulary.json'))",
+    "granularities": {
+      "object": "vocab['object']  # 190 words",
+      "scene": "vocab['scene']   # 177 words",
+      "layout": "vocab['layout']  # 54 words"
+    },
+    "applications": [
+      "Soft rewriting with BERT MLM",
+      "RL-based semantic control",
+      "MoE text encoder routing",
+      "Granularity-aware caption augmentation"
+    ]
+  },
+  "file_structure": {
+    "production": {
+      "rs_vocabulary.json": "Main vocabulary file (v1.3)",
+      "coverage_report.json": "Coverage analysis report",
+      "METADATA.json": "This file"
+    },
+    "archive": {
+      "location": "data/vocabulary/archive/",
+      "contents": "All intermediate versions (v1.0, v1.1, v1.2) and legacy files"
+    },
+    "scripts": {
+      "location": "scripts/",
+      "files": [
+        "build_rs_vocabulary.py - Initial construction",
+        "check_vocabulary_coverage.py - Coverage analysis tool v2.0",
+        "fix_vocabulary.py - v1.0→v1.1 corrections",
+        "update_vocabulary_v1.2.py - v1.1→v1.2 upgrade",
+        "update_vocabulary_v1.3.py - v1.2→v1.3 upgrade"
+      ]
+    }
+  }
+}

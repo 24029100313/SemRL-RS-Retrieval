@@ -1,0 +1,19 @@
+词表 v1.2 → v1.3 变更日志
+======================================================================
+
+优化目标：软改写 + RL全程调控（无LVLM）
+
+1. Object +area
+2. Object +farm
+3. Object +corner
+4. Object +block
+5. Object +district
+6. Object +wharf
+7. Object +lawn
+8. Object +vegetation
+9. Scene +circle
+10. Scene +oval
+11. Scene +triangular
+12. Scene +khaki
+13. Scene +empty
+14. Layout +row

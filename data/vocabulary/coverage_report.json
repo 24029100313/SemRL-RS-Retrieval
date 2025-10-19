@@ -1,0 +1,247 @@
+{
+  "total_tokens_all": 560620,
+  "total_tokens_content": 356103,
+  "covered_tokens_all": 275862,
+  "covered_tokens_content": 268689,
+  "coverage_rate_all": 49.206592700938245,
+  "coverage_rate_content": 75.45260781290807,
+  "unique_words_all": 3860,
+  "unique_words_content": 3066,
+  "covered_unique_all": 421,
+  "covered_unique_content": 397,
+  "granularity_stats": {
+    "object": {
+      "vocab_size": 190,
+      "used_vocab_all": 177,
+      "used_vocab_content": 174,
+      "token_count_all": 140232,
+      "token_count_content": 140054
+    },
+    "scene": {
+      "vocab_size": 177,
+      "used_vocab_all": 177,
+      "used_vocab_content": 173,
+      "token_count_all": 73873,
+      "token_count_content": 71656
+    },
+    "layout": {
+      "vocab_size": 54,
+      "used_vocab_all": 53,
+      "used_vocab_content": 52,
+      "token_count_all": 61757,
+      "token_count_content": 56979
+    }
+  },
+  "uncovered_top50": [
+    {
+      "word": "many",
+      "count": 19258
+    },
+    {
+      "word": "of",
+      "count": 18092
+    },
+    {
+      "word": "with",
+      "count": 11036
+    },
+    {
+      "word": "several",
+      "count": 6553
+    },
+    {
+      "word": "by",
+      "count": 5944
+    },
+    {
+      "word": "piece",
+      "count": 4590
+    },
+    {
+      "word": "to",
+      "count": 3155
+    },
+    {
+      "word": "pieces",
+      "count": 1072
+    },
+    {
+      "word": "very",
+      "count": 891
+    },
+    {
+      "word": "basketball",
+      "count": 812
+    },
+    {
+      "word": "together",
+      "count": 773
+    },
+    {
+      "word": "here",
+      "count": 559
+    },
+    {
+      "word": "number",
+      "count": 517
+    },
+    {
+      "word": "other",
+      "count": 515
+    },
+    {
+      "word": "like",
+      "count": 489
+    },
+    {
+      "word": "people",
+      "count": 464
+    },
+    {
+      "word": "into",
+      "count": 412
+    },
+    {
+      "word": "almost",
+      "count": 298
+    },
+    {
+      "word": "line",
+      "count": 266
+    },
+    {
+      "word": "sizes",
+      "count": 266
+    },
+    {
+      "word": "up",
+      "count": 264
+    },
+    {
+      "word": "city",
+      "count": 261
+    },
+    {
+      "word": "parts",
+      "count": 248
+    },
+    {
+      "word": "few",
+      "count": 234
+    },
+    {
+      "word": "rectangle",
+      "count": 234
+    },
+    {
+      "word": "part",
+      "count": 231
+    },
+    {
+      "word": "snow",
+      "count": 212
+    },
+    {
+      "word": "full",
+      "count": 198
+    },
+    {
+      "word": "sports",
+      "count": 190
+    },
+    {
+      "word": "shape",
+      "count": 188
+    },
+    {
+      "word": "bank",
+      "count": 187
+    },
+    {
+      "word": "island",
+      "count": 173
+    },
+    {
+      "word": "color",
+      "count": 167
+    },
+    {
+      "word": "space",
+      "count": 162
+    },
+    {
+      "word": "ring",
+      "count": 154
+    },
+    {
+      "word": "oil",
+      "count": 145
+    },
+    {
+      "word": "as",
+      "count": 135
+    },
+    {
+      "word": "fish",
+      "count": 135
+    },
+    {
+      "word": "well",
+      "count": 132
+    },
+    {
+      "word": "from",
+      "count": 132
+    },
+    {
+      "word": "soccer",
+      "count": 130
+    },
+    {
+      "word": "among",
+      "count": 122
+    },
+    {
+      "word": "region",
+      "count": 118
+    },
+    {
+      "word": "pasture",
+      "count": 114
+    },
+    {
+      "word": "fan",
+      "count": 114
+    },
+    {
+      "word": "intersection",
+      "count": 114
+    },
+    {
+      "word": "spray",
+      "count": 109
+    },
+    {
+      "word": "edge",
+      "count": 108
+    },
+    {
+      "word": "distribution",
+      "count": 107
+    },
+    {
+      "word": "wasteland",
+      "count": 106
+    }
+  ],
+  "methodology": {
+    "version": "2.0",
+    "features": [
+      "Dual metrics: all tokens vs. content words only",
+      "Lemmatization with singular-plural mapping",
+      "Phrase-level matching (e.g., football field → footballfield)",
+      "POS filtering (NOUN/ADJ/ADV/ADP only for content words)",
+      "Stopword removal"
+    ]
+  }
+}

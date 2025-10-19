@@ -1,0 +1,247 @@
+{
+  "total_tokens_all": 560620,
+  "total_tokens_content": 356103,
+  "covered_tokens_all": 266164,
+  "covered_tokens_content": 258991,
+  "coverage_rate_all": 47.476722200420966,
+  "coverage_rate_content": 72.72923845067298,
+  "unique_words_all": 3860,
+  "unique_words_content": 3066,
+  "covered_unique_all": 407,
+  "covered_unique_content": 383,
+  "granularity_stats": {
+    "object": {
+      "vocab_size": 182,
+      "used_vocab_all": 169,
+      "used_vocab_content": 166,
+      "token_count_all": 133091,
+      "token_count_content": 132913
+    },
+    "scene": {
+      "vocab_size": 172,
+      "used_vocab_all": 172,
+      "used_vocab_content": 168,
+      "token_count_all": 71674,
+      "token_count_content": 69457
+    },
+    "layout": {
+      "vocab_size": 53,
+      "used_vocab_all": 52,
+      "used_vocab_content": 51,
+      "token_count_all": 61399,
+      "token_count_content": 56621
+    }
+  },
+  "uncovered_top50": [
+    {
+      "word": "many",
+      "count": 19258
+    },
+    {
+      "word": "of",
+      "count": 18092
+    },
+    {
+      "word": "with",
+      "count": 11036
+    },
+    {
+      "word": "several",
+      "count": 6553
+    },
+    {
+      "word": "by",
+      "count": 5944
+    },
+    {
+      "word": "area",
+      "count": 5496
+    },
+    {
+      "word": "piece",
+      "count": 4590
+    },
+    {
+      "word": "to",
+      "count": 3155
+    },
+    {
+      "word": "pieces",
+      "count": 1072
+    },
+    {
+      "word": "very",
+      "count": 891
+    },
+    {
+      "word": "basketball",
+      "count": 812
+    },
+    {
+      "word": "together",
+      "count": 773
+    },
+    {
+      "word": "circle",
+      "count": 703
+    },
+    {
+      "word": "lawn",
+      "count": 572
+    },
+    {
+      "word": "khaki",
+      "count": 566
+    },
+    {
+      "word": "here",
+      "count": 559
+    },
+    {
+      "word": "number",
+      "count": 517
+    },
+    {
+      "word": "other",
+      "count": 515
+    },
+    {
+      "word": "like",
+      "count": 489
+    },
+    {
+      "word": "people",
+      "count": 464
+    },
+    {
+      "word": "oval",
+      "count": 423
+    },
+    {
+      "word": "into",
+      "count": 412
+    },
+    {
+      "word": "row",
+      "count": 358
+    },
+    {
+      "word": "empty",
+      "count": 325
+    },
+    {
+      "word": "almost",
+      "count": 298
+    },
+    {
+      "word": "line",
+      "count": 266
+    },
+    {
+      "word": "sizes",
+      "count": 266
+    },
+    {
+      "word": "up",
+      "count": 264
+    },
+    {
+      "word": "city",
+      "count": 261
+    },
+    {
+      "word": "parts",
+      "count": 248
+    },
+    {
+      "word": "farm",
+      "count": 246
+    },
+    {
+      "word": "corner",
+      "count": 237
+    },
+    {
+      "word": "few",
+      "count": 234
+    },
+    {
+      "word": "rectangle",
+      "count": 234
+    },
+    {
+      "word": "part",
+      "count": 231
+    },
+    {
+      "word": "snow",
+      "count": 212
+    },
+    {
+      "word": "full",
+      "count": 198
+    },
+    {
+      "word": "sports",
+      "count": 190
+    },
+    {
+      "word": "shape",
+      "count": 188
+    },
+    {
+      "word": "bank",
+      "count": 187
+    },
+    {
+      "word": "triangular",
+      "count": 182
+    },
+    {
+      "word": "island",
+      "count": 173
+    },
+    {
+      "word": "color",
+      "count": 167
+    },
+    {
+      "word": "district",
+      "count": 164
+    },
+    {
+      "word": "space",
+      "count": 162
+    },
+    {
+      "word": "ring",
+      "count": 154
+    },
+    {
+      "word": "wharf",
+      "count": 150
+    },
+    {
+      "word": "oil",
+      "count": 145
+    },
+    {
+      "word": "vegetation",
+      "count": 139
+    },
+    {
+      "word": "block",
+      "count": 137
+    }
+  ],
+  "methodology": {
+    "version": "2.0",
+    "features": [
+      "Dual metrics: all tokens vs. content words only",
+      "Lemmatization with singular-plural mapping",
+      "Phrase-level matching (e.g., football field → footballfield)",
+      "POS filtering (NOUN/ADJ/ADV/ADP only for content words)",
+      "Stopword removal"
+    ]
+  }
+}
