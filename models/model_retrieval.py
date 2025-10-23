@@ -34,7 +34,16 @@ class HarMA(HarMABase):
                 checkpoint = torch.load(ckpt_path, map_location='cpu')
                 msg = self.model.load_state_dict(checkpoint, strict=False)
         else:
-            self.model, _, _ = open_clip.create_model_and_transforms("ViT-B/32")
+            # Load ViT-B/32 with local laion2b weights
+            import os
+            local_checkpoint = "/data2/huggingface_cache/models--laion--CLIP-ViT-B-32-laion2B-s34B-b79K/snapshots/1a25a446712ba5ee05982a381eed697ef9b435cf/open_clip_pytorch_model.bin"
+            if os.path.exists(local_checkpoint):
+                self.model, _, _ = open_clip.create_model_and_transforms("ViT-B/32", pretrained=False)
+                checkpoint = torch.load(local_checkpoint, map_location='cpu')
+                self.model.load_state_dict(checkpoint, strict=False)
+                print(f" Loaded local CLIP weights from {local_checkpoint}")
+            else:
+                self.model, _, _ = open_clip.create_model_and_transforms("ViT-B/32")
 
     def get_vis_emb(self, image, idx=None, label=None):
         if self.config['is_harma']:

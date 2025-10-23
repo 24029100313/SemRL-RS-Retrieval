@@ -26,14 +26,14 @@ embed_dim: 512
 temp1: 0.07
 temp2: 0.07
 is_harma: True
-model: 'vit'  
+model: 'geo'  
 if_evaluation: False
 save_epoch: False
 save_num_epoch: 10
 
 ############## Other Settings ##############
-optimizer: {opt: adamW, lr: 0.0004, weight_decay: 0.04, lr_mult: 2}  
-schedular: {sched: linear, lr: 0.0004, epochs: 50, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
+optimizer: {opt: adamW, lr: 4e-6, weight_decay: 0.04, lr_mult: 2}  
+schedular: {sched: linear, lr: 4e-6, epochs: 80, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
 
 ################ Model setting  #######################################################################################
 #== 1. Representation Alignment, RA                                                                                 ####

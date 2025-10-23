@@ -21,11 +21,19 @@ def get_dist_launch(args):  # some examples
                "--nnodes=1 "
 
     elif args.dist == 'f12':
-        return "CUDA_VISIBLE_DEVICES=1,2 WORLD_SIZE=2 /home/pjc/.conda/envs/xlvm/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=2 " \
+        return "CUDA_VISIBLE_DEVICES=1,2 WORLD_SIZE=2 /home/user/anaconda3/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=2 " \
+               "--nnodes=1 "
+
+    elif args.dist == 'f123':
+        return "CUDA_VISIBLE_DEVICES=1,2,3 WORLD_SIZE=3 /home/user/anaconda3/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=3 " \
                "--nnodes=1 "
 
     elif args.dist == 'f02':
-        return "CUDA_VISIBLE_DEVICES=0,2 WORLD_SIZE=2 /home/pjc/.conda/envs/xlvm/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=2 " \
+        return "CUDA_VISIBLE_DEVICES=0,2 WORLD_SIZE=2 /data/env/semrl/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=2 " \
+               "--nnodes=1 "
+
+    elif args.dist == 'f023':
+        return "CUDA_VISIBLE_DEVICES=0,2,3 WORLD_SIZE=3 /data/env/semrl/bin/python -W ignore -m torch.distributed.launch --master_port 9999 --nproc_per_node=3 " \
                "--nnodes=1 "
 
     elif args.dist == 'f03':

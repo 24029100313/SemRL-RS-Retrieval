@@ -1,8 +1,8 @@
 ############## The train & val & test set root ##############
-train_file: ['data/augmented/rsicd_train_backtrans_50pct.json']  # 50% backtrans
-val_file: 'data/finetune/rsicd_val.json'     # Validation data file
-test_file: 'data/finetune/rsicd_test.json'    # Testing data file
-image_root: '/data2/rsicd/'      # Root directory for images
+train_file: ['data/augmented/rsitmd_train_backtrans_50pct.json']  # 50% backtrans
+val_file: 'data/finetune/rsitmd_val.json' # Path to the validation data file
+test_file: 'data/finetune/rsitmd_test.json' # Path to the testing data file
+image_root: '/data2/rsitmd/'
 
 ############## Vision encoder setting ##############
 vision_config: 'configs/config_swinT_224.json'  # configs/config_swinT_224.json 'configs/config_swinB_224.json'
@@ -26,14 +26,14 @@ embed_dim: 512
 temp1: 0.07
 temp2: 0.07
 is_harma: True
-model: 'vit'  
+model: 'geo'  
 if_evaluation: False
-save_epoch: False
+save_epoch: True
 save_num_epoch: 10
 
 ############## Other Settings ##############
-optimizer: {opt: adamW, lr: 0.0004, weight_decay: 0.04, lr_mult: 2}  
-schedular: {sched: linear, lr: 0.0004, epochs: 50, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
+optimizer: {opt: adamW, lr: 4e-6, weight_decay: 0.04, lr_mult: 2}  
+schedular: {sched: linear, lr: 4e-6, epochs: 80, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
 
 ################ Model setting  #######################################################################################
 #== 1. Representation Alignment, RA                                                                                 ####

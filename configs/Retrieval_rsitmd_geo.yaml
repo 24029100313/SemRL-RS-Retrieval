@@ -2,7 +2,7 @@
 train_file:  ['data/finetune/rsitmd_train.json'] # Path to the training data file
 val_file: 'data/finetune/rsitmd_val.json' # Path to the validation data file
 test_file: 'data/finetune/rsitmd_test.json' # Path to the testing data file
-image_root: '../PIR/rsitmd/'
+image_root: '/data2/rsitmd/'
 
 ############## Vision encoder setting ##############
 vision_config: 'configs/config_swinT_224.json'  # configs/config_swinT_224.json 'configs/config_swinB_224.json'
@@ -18,9 +18,9 @@ text_encoder: 'data/bert-base-uncased'
 
 ################ Training setting ################
 #== no need revise in general
-batch_size_train: 214
-batch_size_test: 128
-batch_size_test_text: 128
+batch_size_train: 96
+batch_size_test: 64
+batch_size_test_text: 64
 
 embed_dim: 512
 temp1: 0.07

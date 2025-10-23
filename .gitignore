@@ -60,3 +60,18 @@ Thumbs.db
 *~
 .tmp/
 
+
+# Checkpoints and training outputs
+checkpoints/
+models/pretrain/
+pretrain/
+
+# Dataset files
+dataset/*.zip
+data/augmented/*.json
+
+# Training logs
+training_*.log
+
+# Downloaded models
+*.bin
