@@ -1,5 +1,5 @@
 ############## The train & val & test set root ##############
-train_file:  ['data/finetune/rsitmd_train.json'] # Path to the training data file
+train_file:  ['data/augmented/rsitmd_train_backtrans.json'] # Path to the training data file (100% augmented)
 val_file: 'data/finetune/rsitmd_val.json' # Path to the validation data file
 test_file: 'data/finetune/rsitmd_test.json' # Path to the testing data file
 image_root: '/data2/rsitmd/'
@@ -33,7 +33,7 @@ save_num_epoch: 10
 
 ############## Other Settings ##############
 optimizer: {opt: adamW, lr: 4e-6, weight_decay: 0.04, lr_mult: 2}  
-schedular: {sched: linear, lr: 4e-6, epochs: 80, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
+schedular: {sched: linear, lr: 4e-6, epochs: 6, num_warmup_steps: 0.1} # need to set the epoches, if needed, also lr
 
 ################ Model setting  #######################################################################################
 #== 1. Representation Alignment, RA                                                                                 ####
